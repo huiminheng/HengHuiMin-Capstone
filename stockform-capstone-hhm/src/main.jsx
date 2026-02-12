@@ -1,10 +1,15 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import "./index.css";
+import App from "./App.jsx";
+import { PriceProvider } from "./contexts/PriceContext";
 
-createRoot(document.getElementById('root')).render(
+const API_KEY = "PY5454LK1DK9S6X2";
+
+createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <App />
+    <PriceProvider apiKey={API_KEY}>
+      <App />
+    </PriceProvider>
   </StrictMode>,
-)
+);

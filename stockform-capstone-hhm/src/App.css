@@ -40,3 +40,9 @@
 .read-the-docs {
   color: #888;
 }
+
+.app {
+  background-color: #e4c1dcf5;
+  min-height: 500vh;
+  padding: 20px;
+}
