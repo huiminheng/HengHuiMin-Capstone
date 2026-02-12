@@ -2,6 +2,7 @@ import { useState, useCallback } from "react";
 import StockForm from "./components/StockForm";
 import StockList from "./components/StockList";
 import { usePrices } from "./contexts/PriceContext";
+import "./App.css";
 
 function App() {
   const [stocks, setStocks] = useState([]);
@@ -29,13 +30,15 @@ function App() {
   return (
     <div className="app">
       <h1>📊 Finance Dashboard</h1>
-      <StockForm onAddStock={handleAddStock} />
-      <h2>Stock List</h2>
-      <StockList
-        stocks={stocks}
-        calculateProfitLoss={calculateProfitLoss}
-        getProfitLossColor={getProfitLossColor}
-      />
+      <div className="main-content-align">
+        <StockForm onAddStock={handleAddStock} />
+        <h2 className="stock-list-heading">Stock List</h2>
+        <StockList
+          stocks={stocks}
+          calculateProfitLoss={calculateProfitLoss}
+          getProfitLossColor={getProfitLossColor}
+        />
+      </div>
     </div>
   );
 }

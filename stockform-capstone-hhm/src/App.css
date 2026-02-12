@@ -1,3 +1,9 @@
+.main-content-align {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -42,7 +48,7 @@
 }
 
 .app {
-  background-color: #e4c1dcf5;
-  min-height: 500vh;
+  background-color: #e4e2c1f5;
+  min-height: 100vh;
   padding: 20px;
 }
