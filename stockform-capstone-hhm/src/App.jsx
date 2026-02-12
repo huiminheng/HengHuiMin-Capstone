@@ -24,7 +24,7 @@ function App() {
   };
 
   const getProfitLossColor = (profitLoss) => {
-    return profitLoss >= 0 ? "#28a745" : "#dc3545";
+    return profitLoss >= 0 ? "#052d0f" : "#dc3545";
   };
 
   return (
