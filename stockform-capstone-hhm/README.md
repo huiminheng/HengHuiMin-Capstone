@@ -1,18 +1,73 @@
-# React + Vite
+# StockForm
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple React + Vite application for tracking stock purchases and calculating profit/loss.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Add stocks with symbol, quantity, and purchase price
+- View a list of added stocks
+- See real-time profit/loss calculations (requires API key)
+- Clean, responsive UI
 
-## React Compiler
+## Getting Started
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+### Prerequisites
 
-Note: This will impact Vite dev & build performances.
+- Node.js (v18 or newer recommended)
+- npm (comes with Node.js)
 
-## Expanding the ESLint configuration
+### Installation
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Clone the repository:
+   ```sh
+   git clone <your-repo-url>
+   cd stockform-capstone-hhm
+   ```
+2. Install dependencies:
+   ```sh
+   npm install
+   ```
+
+### Running the App
+
+Start the development server:
+
+```sh
+npm run dev
+```
+
+Visit the local URL shown in your terminal (usually http://localhost:5173).
+
+### Build for Production
+
+```sh
+npm run build
+```
+
+### Linting
+
+```sh
+npm run lint
+```
+
+## Project Structure
+
+- `src/` - Main source code
+  - `components/` - React components (StockForm, StockList, etc.)
+  - `contexts/` - React context for price fetching
+  - `hooks/` - Custom React hooks
+  - `App.jsx` - Main app component
+  - `App.css` - App styling
+- `public/` - Static assets
+
+## API Key
+
+The app uses a stock price API. Set your API key in `src/main.jsx` (see the `API_KEY` variable).
+
+## Contributing
+
+Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
+
+## License
+
+MIT
