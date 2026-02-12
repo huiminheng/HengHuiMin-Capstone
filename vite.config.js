@@ -3,11 +3,11 @@ import react from "@vitejs/plugin-react";
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: "/henghuimin-capstone/",
   plugins: [
     react({
       babel: {
         plugins: [["babel-plugin-react-compiler"]],
-        base: "/henghuimin-capstone/",
       },
     }),
   ],
